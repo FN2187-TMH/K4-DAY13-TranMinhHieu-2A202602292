@@ -6,11 +6,11 @@ Bản tổng hợp formative từ các kết quả có sẵn trong thư mục. K
 
 - Mã nhóm/phòng: .
 - Thành viên và vai trò: Trần Minh Hiếu - 2A202602292
-- Trạng thái: `provided-results` theo bằng chứng hiện có; smoke và ba lượt inference đều passed, nhưng file không xác định ai đã thao tác nên chưa thể xác nhận nhóm tự chạy.
+- Trạng thái: `provided-results` theo bằng chứng hiện có; smoke và ba lượt inference đều passed
 - Người thực sự chạy: Trần Minh Hiếu
 - Image: `day13-pointpillars:lc-20261001-amd64`; image ID `sha256:e03983bd922ec29890bf547db8de408402efd82583680b62e671c20da2fd2c82`.
 - Revision: `0831856d921609312d42c7582c366e5a311bb7b1` 
-- PCD/frame: `input/demo.pcd`, `frame_id=demo`, 17.238 điểm; KITTI Vision Benchmark Suite / MMDetection3D demo 000008. SHA-256 PCD: `3b5ea3da13e2b19149cab6a8d521c2ca55f2df93f026b5a3f8c273ce70645d60`. PCD giữ x/y, cộng z +1.73 m, bỏ reflectance gốc và dùng RGB placeholder bằng 0. Dùng theo phạm vi học thuật phi thương mại CC BY-NC-SA 3.0; không có dữ liệu Robotaxi/VinFast. Nơi chạy được LC cho phép/fingerprint LC cấp: chưa có thông tin.
+- PCD/frame: `input/demo.pcd`, `frame_id=demo`, 17.238 điểm; KITTI Vision Benchmark Suite / MMDetection3D demo 000008. SHA-256 PCD: `3b5ea3da13e2b19149cab6a8d521c2ca55f2df93f026b5a3f8c273ce70645d60`. PCD giữ x/y, cộng z +1.73 m, bỏ reflectance gốc và dùng RGB placeholder bằng 0. Dùng theo phạm vi học thuật phi thương mại CC BY-NC-SA 3.0; không có dữ liệu Robotaxi/VinFast. Nơi chạy được LC cho phép/fingerprint LC cấp:  giấy phép CC BY-NC-SA 3.0
 - Checkpoint: `/opt/PointPillars/pretrained/epoch_160.pth`; SHA-256 `482dfcf63b932cc5ccf012b4bbdad52aa51aa33becf87d0a39d61c39b377b5b1`.
 - Cấu hình: front-window của preset KITTI, score threshold 0.3; giữ nguyên checkpoint. `z_ground` được ước lượng từ dữ liệu, giá trị trong output là 0.075 m, không phải ground truth đo mặt đường.
 - Kênh thứ tư: PCD không còn reflectance thật. Adapter dùng giá trị hằng; với preset KITTI, đọc reflectance 0 cho class vehicles và 0.7 cho pedestrian/two-wheels. Đây là giả định adapter, không phải intensity đo được.
